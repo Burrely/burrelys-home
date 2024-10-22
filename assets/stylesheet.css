@@ -58,8 +58,8 @@ h1,h2,h3,h4 {
 h1.dark {
     color: white;
 }
-.dark h1, sup {
-    color: #EE7C2F;
+.dark h1, sup, .highlight {
+    color: var(--primary-color);
 }
 sup {
     font-weight: bold;
