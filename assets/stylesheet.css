@@ -30,8 +30,8 @@
 }
 
 @font-face {
-    font-family: "Redline", Impact;
-    src: url("../assets/fonts/redline.ttf");
+    font-family: Redline;
+    src: url("../assets/fonts/redline.ttf") format('truetype');
 }
 
 html { scroll-behavior: smooth; }
@@ -51,15 +51,15 @@ body {
 }
 
 h1,h2,h3,h4 {
-    font-family: "Redline";
+    font-family: Redline, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-overflow: ellipsis;
     overflow: clip;
 }
 h1.dark {
     color: white;
 }
-.dark h1, sup {
-    color: #EE7C2F;
+.dark h1, sup, .highlight {
+    color: var(--primary-color);
 }
 sup {
     font-weight: bold;
@@ -444,3 +444,8 @@ table.reference-table tr td:nth-child(even) {
     width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    main {
+      padding: 20px;
+    }
+}
