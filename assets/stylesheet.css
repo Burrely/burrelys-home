@@ -1,0 +1,446 @@
+@property --primary-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value:#FF7A24;
+}
+@property --secondary-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value:#756152;
+}
+@property --tertiary-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value:#40352D;
+}
+@property --contrast-1 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value:#241F26;
+}
+@property --contrast-1-transparent {
+    syntax: "<color>";
+    inherits: false;
+    initial-value:rgba(36,31,38,0.5);
+}
+@property --contrast-2 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value:#DBD2CC;
+}
+
+@font-face {
+    font-family: "Redline", Impact;
+    src: url("../assets/fonts/redline.ttf");
+}
+
+html { scroll-behavior: smooth; }
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #DBD2CC;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4 {
+    font-family: "Redline";
+    text-overflow: ellipsis;
+    overflow: clip;
+}
+h1.dark {
+    color: white;
+}
+.dark h1, sup {
+    color: #EE7C2F;
+}
+sup {
+    font-weight: bold;
+}
+abbr, sup {
+    cursor: help;
+}
+.dark {
+    background-color: var(--tertiary-color);
+}
+p {
+    font-size: 18px;
+}
+small, sup {
+    font-size: 12px;
+    vertical-align: top;
+}
+.highlight {
+    color: var(--primary-color);
+}
+
+.navAnchor { 
+    position: relative;
+    top: -173px;
+}
+
+a {
+    color: var(--primary-color)
+}
+a > object.external {
+    color: var(--primary-color);
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    fill: none;
+}
+a > object.external .icon-external-link {
+    stroke: var(--primary-color);
+}
+a:hover {
+    color: var(--contrast-2);
+}
+
+.icon-external-link {
+    color: var(--primary-color);
+    stroke: var(--primary-color);
+    fill: none;
+}
+
+#headerButtons-4 a.button {
+    flex: 25;
+    min-width: 80px;
+    min-height: 32px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 7px;
+    text-align: center;
+    background-color: var(--tertiary-color);
+    text-decoration: none;
+    transition-duration: .75s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#headerButtons-4 a.button:hover {
+    transition-duration: .25s;
+    background-color: var(--secondary-color);
+}
+#headerButtons-4 a.button:active {
+    background-color: var(--primary-color);
+}
+
+li {
+    margin-bottom: 8px;
+}
+li>ul {
+    margin-top:4px;
+}
+li>ul>li {
+    margin-bottom:2px;
+}
+li::marker {
+    color: var(--secondary-color);
+}
+
+li div.collapsible {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+    cursor: pointer;
+    user-select: text;
+    transition-duration: .75s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+li div.collapsible:hover * {
+    color: var(--primary-color);
+    transition-duration: .25s;
+}
+li div.collapsible.active * {
+    color: var(--contrast-2);
+}
+
+li div.collapsible.active:has(li) {
+    background-color: red;
+}
+
+
+li div.collapsible:nth-child(1)::after {
+    display: inline-block;
+    content: " ";
+    transform: rotate(-0.5turn);
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/guide-icons/common-icon-chevron-down-contrast-2.png");
+    background-size: contain;
+    vertical-align: bottom;
+    transition-duration: 0.5s;
+    border: none;
+    
+}
+li div.collapsible.active:nth-child(1)::after {
+    transform: rotate(0turn);
+}
+li div.collapsible + ul {
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+li div.collapsible.active + ul {
+    margin-top: 4px;
+}
+
+
+p:has(small) {
+    line-height: 12px;
+}
+
+main {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--contrast-1-transparent);
+    padding: 20px 100px;
+    min-height: 100vh;
+}
+
+main > * {
+    min-width: 380px;
+}
+
+nav {
+    position: sticky;
+    top: 25px;
+    z-index: 100;
+}
+
+#headerButtons-4 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+main>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex-column > .sticky-wrapper {
+    position: sticky;
+    top: 128px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex-column article:not(:first-child) .navAnchor { 
+    position: relative;
+    top: -153px;
+}
+
+.gallery {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.gallery img, .gallery video {
+    width: 100%;
+    border-radius: 12px;
+}
+.gallery article > img, .gallery article > video {
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+}
+.gallery article {
+    min-width: unset;
+    padding-bottom: 4px;
+}
+
+.gallery .tag-list {
+    margin: 4px 0;
+    gap: 6px;
+}
+.gallery .tag-list > span {
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--contrast-2);
+    padding: 0 6px;
+}
+.gallery .tag-list small {
+    display: block;
+    padding: 2px;
+}
+
+.testimonial img {
+    margin-top: 20px;
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.flex-15 {
+    flex-basis: 15%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.flex-30 {
+    flex-basis: 30%;
+    flex-grow: 30;
+    flex-shrink: 0;
+}
+.flex-40 {
+    flex-basis: 40%;
+    flex-grow: 40;
+    flex-shrink: 0;
+}
+.flex-50 {
+    flex-basis: 50%;
+    flex-grow: 50;
+    flex-shrink: 0;
+}
+.flex-60 {
+    flex-basis: 60%;
+    flex-grow: 60;
+    flex-shrink: 0;
+}
+.flex-90 {
+    flex: 90;
+    flex-shrink: 0;
+}
+
+.flex-100 {
+    flex-grow: 100;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+article {
+    position: relative;
+    border-radius: 12px;
+    height: fit-content;
+    min-width: 360px;
+    background-color: var(--contrast-1);
+    padding: 0 20px;
+}
+
+article.bordered .secondary {
+    border-radius: 12px;
+    background-color: var(--secondary-color);
+    padding: 0 20px;
+}
+
+.centered {
+    text-align: center;
+}
+
+img.sticker.small {
+    width: 140px;
+    height: 140px;
+    transform: rotate(-0.02turn);
+}
+img.absolute-top-right {
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+.flex-row.social {
+    gap: 8px;
+    margin-bottom: 20px;
+}
+a.social {
+    display: flex;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.bottom-margin {
+    margin-bottom: 20px;
+}
+
+div.flex-row.social > div {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+}
+
+div.flex-row.social > div > object {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+div.social a {
+    width: inherit;
+    height: inherit;
+}
+div.social a img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 1px 1px 4px black;
+    transition-duration: .75s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+div.social a:hover img {
+    width: 100%;
+    border-radius: 12px;
+    transform: rotate(0.02turn) scale(1.2);
+    transition-duration: .25s;
+}
+
+div.flex {
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+a {
+    transition-duration: .75s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+a:hover {
+    transition-duration: .25s;
+}
+
+table.reference-table {
+    display: table;
+    line-height: 12px;
+    border-spacing: 0 4px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+table.reference-table tr {
+  vertical-align: top;
+  text-wrap: wrap;
+}
+table.reference-table tr td:nth-child(odd) {
+    width: 20px;
+}
+
+table.reference-table tr td:nth-child(even) {
+    width: 100%;
+}
+
