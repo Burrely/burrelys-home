@@ -99,7 +99,7 @@ a > object.external {
 a > object.external .icon-external-link {
     stroke: var(--primary-color);
 }
-a:hover {
+a:hover, a:hover * {
     color: var(--contrast-2);
 }
 
@@ -416,11 +416,11 @@ div.flex {
     display: flex;
 }
 
-a {
+a, a *{
     transition-duration: .75s;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-a:hover {
+a:hover, a:hover *{
     transition-duration: .25s;
 }
 
