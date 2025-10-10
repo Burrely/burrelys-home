@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Halloween Jam Timer</title>
+
+    <!-- Styling & functionality assets  -->
+    <link rel="icon" type="image/x-icon" href="assets/favicons/Burrely-favicon.png">
+
+    <!-- Embed metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Avatar Jam - Halloween Challenge 2025 Timer" />
+    <meta property="og:description" content="A web source Timer for the 2025 Halloween Challenge Avatar Jam. You can use this in your streaming software to have a overlay timer." />
+    <meta property="og:url" content="https://burrely.com/ChallengeWidget" />
+    <meta property="og:image" content="assets/metadata/Burrely-metadata-icon.jpg" />
+    <meta name="theme-color" content="#FF7A24">
+
+    <style>
+        
+    @property --primary-color {
+        syntax: "<color>";
+        inherits: false;
+        initial-value:#FF7A24;
+    }
+    @property --secondary-color {
+        syntax: "<color>";
+        inherits: false;
+        initial-value:#756152;
+    }
+    @property --tertiary-color {
+        syntax: "<color>";
+        inherits: false;
+        initial-value:#40352D;
+    }
+    @property --contrast-1 {
+        syntax: "<color>";
+        inherits: false;
+        initial-value:#241F26;
+    }
+    @property --contrast-1-transparent {
+        syntax: "<color>";
+        inherits: false;
+        initial-value:rgba(36,31,38,0.5);
+    }
+    @property --contrast-2 {
+        syntax: "<color>";
+        inherits: false;
+        initial-value:#DBD2CC;
+    }
+        
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #DBD2CC;
+        box-sizing: border-box;
+    }
+    .flex-100 {
+        flex-basis: 100%;
+        flex-grow: 100;
+        flex-shrink: 0;
+    }
+    .centered {
+        text-align: center;
+    }
+    article {
+        background-image: url("assets/background.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0;
+        border-radius: 24px;
+        padding: 2px;
+    }
+    article h1 {
+        color: var(--primary-color);
+        margin: 6px;
+    }
+    article h1:last-child {
+        color: var(--contrast-2);
+        margin: 6px;
+    }
+    main {
+        display: block;
+        max-width: 480px;
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+    body {
+        margin: 0;
+    }
+
+    </style>
+    <script src="assets/javascript/timers.js" defer></script>
+
+</head>
+<body>
+    <main>
+        <div>
+            <!-- Header - Main -->
+            <div class="flex-100 flex-column">
+                <article class="centered">
+                    <h1 style="text-align: center;">Current Activity: <span id="current-event"></span></h1>
+                    <h1 style="text-align: center;">
+                        <span id="next-event"></span>
+                    </p>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
