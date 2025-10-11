@@ -1,19 +1,19 @@
 const events = [
     {
         title: "Introduction",
-        date: new Date("2025-10-10T20:00:00.000+01:00")
+        date: new Date("2025-10-10T19:00:00.000+01:00")
     },
     {
         title: "Avatar Jam Kick-off",
-        date: new Date("2025-10-10T21:00:00.000+01:00")
+        date: new Date("2025-10-10T20:00:00.000+01:00")
     },
     {
         title: "Avatar Jam Finish",
-        date: new Date("2025-10-12T21:00:00.000+01:00")
+        date: new Date("2025-10-12T20:00:00.000+01:00")
     },
     {
         title: "Show Off",
-        date: new Date("2025-10-12T21:30:00.000+01:00")
+        date: new Date("2025-10-12T20:30:00.000+01:00")
     },
 ]
 //Change these to whatever the selectors are
