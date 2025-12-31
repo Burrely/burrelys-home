@@ -1,32 +1,10 @@
-@property --primary-color {
-    syntax: "<color>";
-    inherits: false;
-    initial-value:#FF7A24;
-}
-@property --secondary-color {
-    syntax: "<color>";
-    inherits: false;
-    initial-value:#756152;
-}
-@property --tertiary-color {
-    syntax: "<color>";
-    inherits: false;
-    initial-value:#40352D;
-}
-@property --contrast-1 {
-    syntax: "<color>";
-    inherits: false;
-    initial-value:#241F26;
-}
-@property --contrast-1-transparent {
-    syntax: "<color>";
-    inherits: false;
-    initial-value:rgba(36,31,38,0.5);
-}
-@property --contrast-2 {
-    syntax: "<color>";
-    inherits: false;
-    initial-value:#DBD2CC;
+body {
+  --primary-color: #FF7A24;
+  --secondary-color: #756152;
+  --tertiary-color: #40352D;
+  --contrast-1: #241F26;
+  --contrast-1-transparent: rgba(36,31,38,0.5);
+  --contrast-2: #DBD2CC;
 }
 
 @font-face {
