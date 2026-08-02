@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Burrely's Community Minecraft Modpack</title>
+
+    <!-- Styling & functionality assets  -->
+    <script src="assets/javascript/collapsible-controller.js" defer></script>
+    <script src="assets/javascript/index.js" defer></script>
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/Burrely-favicon.png">
+
+    <!-- Embed metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Burrely's Home" />
+    <meta property="og:description" content="My commissions, portfolio & information." />
+    <meta property="og:url" content="https://burrely.com/" />
+    <meta property="og:image" content="assets/metadata/Burrely-metadata-icon.jpg" />
+    <meta name="theme-color" content="#FF7A24">
+
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div>
+            
+            <!-- Header - Main -->
+            <article class="flex-100 centered">
+                <h1>Burrely's Community Modpack</h1>
+                    <p>
+                        Here you'll find everything pertaining to my community modpack. Information, Instructions & Downloads.
+                    </p>
+                    <p>
+                        <small>
+                            If you're already familiar with installing .mrpack files on either Prism or Modrinth then you can go ahead and fetch the <b>latest</b> version of the modpack at the <a href="#Changelog">Changelog & Downloads</a> section of this page.
+                        </small>
+                    </p>
+            </article>
+
+            <!-- Who am I? / Socials -->
+            <div class="flex-40 flex-column">
+                <!-- Checklist -->
+                <article>
+                    <h1 id="Checklist">Checklist</h1>
+                    <p>
+                        This checklist will make sure you're ready to play!
+                    </p>
+                    <form id="ModpackCheckForm">
+                        <ol>
+                            <li>
+                                <input type="checkbox" name="modpackCheckbox" onchange="UpdateModpackReadyMessage()"><label>Installed a modded Minecraft launcher</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="modpackCheckbox" onchange="UpdateModpackReadyMessage()"><label>Logged in on the modded Minecraft launcher.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="modpackCheckbox" onchange="UpdateModpackReadyMessage()"><label>Downloaded the LATEST modpack.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="modpackCheckbox" onchange="UpdateModpackReadyMessage()"><label>Installed the LATEST modpack.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="modpackCheckbox" onchange="UpdateModpackReadyMessage()"><label>Requested to be whitelisted.</label>
+                            </li>
+                        </ol>
+                    </form>
+                    <p id="ModpackReady">Modpack is NOT ready.</p>
+                    <script defer>
+                        var modpackReadyElement = document.getElementById("ModpackReady");
+
+                        function AllCheckboxesChecked () {
+                            var checkboxes = document.forms.ModpackCheckForm.elements.modpackCheckbox;
+                            for (var i = 0; i < checkboxes.length; i++) {
+                                if (!checkboxes[i].checked) {
+                                return false;
+                                }
+                            }
+                            return true;
+                        }
+
+                        function UpdateModpackReadyMessage() {
+                            if (AllCheckboxesChecked()) {
+                                modpackReadyElement.innerHTML = "Modpack is <b>READY</b>.";
+                            } else {
+                                modpackReadyElement.innerHTML = "Modpack is <b>NOT ready</b>.";
+                            }
+                            console.log(AllCheckboxesChecked());
+                        }
+
+                        UpdateModpackReadyMessage();
+
+                    </script>
+                </article>
+
+
+                <!-- Written Instructions -->
+                <article>
+                    <h1 id="Instructions">Step-by-step instructions</h1>
+                    <ol>
+                        <li>
+                            Download one of the following modpack launchers:
+                            <ul>
+                                <li>
+                                    <a href="https://prismlauncher.org/download/"><b>Prism</b></a>
+                                </li>
+                                <li>
+                                    <a href="https://modrinth.com/app"><b>Modrinth</b></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Launch your modpack launcher and login with your Minecraft account.
+                        </li>
+                        <li>
+                            Download the <b>latest</b> version of the modpack at the <a href="#Changelog">Changelog & Downloads</a> section of this page.
+                        </li>
+                        <li>
+                            Drag the downloaded .mrpack file into your launcher and let it download the mods.
+                        </li>
+                        <li>
+                            Congratulations, you have installed the modpack! All you have to do now is launch. The server will be visible in the multiplayer list!
+                        </li>
+                    </ol>
+                </article>
+                <!-- Video Instructions -->
+                <article>
+                    <h1 id="InstructionsVideo">Video instructions</h1>
+                    <div class="auto-resizable-iframe">
+                        <div>
+                            <iframe frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/4KtT1CWQb6Q"></iframe>
+                        </div>
+                    </div>
+                    <p><small> </small></p>
+                </article>
+            </div>
+
+            <!-- Commissions information -->
+            <div class="flex-40 flex-column">
+                <article class="bordered dark secondary">
+                    <h1>Changelog & Downloads <div id="Changelog" class="navAnchor"></div></h1>
+
+                    <ul>
+                        <li>
+                            <div class="collapsible"><b><i>26.2.0</i></b> (latest)</div>
+                            <ul>
+                                <li>
+                                    <b>Added mods</b>
+                                    <ul>
+                                        <li><a href="https://modrinth.com/mod/fxxUqruK">Voxy</a> [0.2.18-beta]
+                                        <small><i>Reason: Better replacement for Bobby.</i></small></li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://modrinth.com/mod/zV5r3pPn">3d-Skin-Layers</a> [1.11.2]</li>
+                                <li><a href="https://modrinth.com/mod/HMMhT0vF">Autowalk</a> [1.4,26.2]</li>
+                                <li><a href="https://modrinth.com/mod/iRXmuz7a">BetterRenderDistance</a> [1.2.1-beta.2]</li>
+                                <li><a href="https://modrinth.com/mod/DnNYdJsx">ChatAnimation</a> [1.3.0]</li>
+                                <li><a href="https://modrinth.com/mod/K0AkAin6">ClientSort</a> [3.103.1+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/9s6osm5g">Cloth Config v26.2</a> [26.2.155]</li>
+                                <li><a href="https://modrinth.com/mod/1IjD5062">Continuity</a> [3.0.1+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/DOUdJVEm">Controlify</a> [3.2.1+mc26.2]</li>
+                                <li><a href="https://modrinth.com/mod/ETlrkaYF">Cubes Without Borders</a> [4.1.0+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/smUP7V3r">Durability Tooltip</a> [1.1.6]</li>
+                                <li><a href="https://modrinth.com/mod/OZBR5JT5">Easy Anvils</a> [26.2.2]</li>
+                                <li><a href="https://modrinth.com/mod/9hx3AbJM">Easy Magic</a> [26.2.0]</li>
+                                <li><a href="https://modrinth.com/mod/xLSpHE43">Enchantment Insights</a> [26.2.2]</li>
+                                <li><a href="https://modrinth.com/mod/4I1XuqiY">Entity Model Features</a> [3.2.6]</li>
+                                <li><a href="https://modrinth.com/mod/BVzZfTc1">Entity Texture Features</a> [7.1.1]</li>
+                                <li><a href="https://modrinth.com/mod/NNAgCjsB">EntityCulling</a> [1.10.5]</li>
+                                <li><a href="https://modrinth.com/mod/P7dR8mSH">Fabric API</a> [0.156.0+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/Ha28R6CL">Fabric Language Kotlin</a> [1.13.13+kotlin.2.4.10]</li>
+                                <li><a href="https://modrinth.com/mod/JI58LZI4">Fair Freecam</a> [26.7.1]</li>
+                                <li><a href="https://www.curseforge.com/minecraft/mc-mods/falling-tree">FallingTree</a> [25]</li>
+                                <li><a href="https://modrinth.com/mod/gNyb2VWL">Feather Falling Rework</a> [r1]</li>
+                                <li><a href="https://modrinth.com/mod/uXXizFIs">FerriteCore</a> [9.0.0]</li>
+                                <li><a href="https://modrinth.com/mod/ohNO6lps">Forge Config API Port</a> [26.2.1]</li>
+                                <li><a href="https://modrinth.com/mod/NRLPy2mk">Global Data- &amp; Resourcepacks</a> [26.2.0]</li>
+                                <li><a href="https://modrinth.com/mod/htFd9eMF">Hide Your Armor</a> [1.6.0]</li>
+                                <li><a href="https://modrinth.com/mod/5ZwdcRci">ImmediatelyFast</a> [1.16.2+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/REfW2AEX">InvMove</a> [0.9.5]</li>
+                                <li><a href="https://modrinth.com/mod/YL57xq9U">Iris</a> [1.11.2+mc26.2]</li>
+                                <li><a href="https://modrinth.com/mod/ow5rRJYD">Item Stat Tracker</a> [1.1.1]</li>
+                                <li><a href="https://modrinth.com/mod/yBW8D80W">LambDynamicLights</a> [4.12.2+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/gvQqBUqZ">Lithium</a> [0.25.3+mc26.2]</li>
+                                <li><a href="https://modrinth.com/mod/mOgUt4GM">Mod Menu</a> [20.0.1]</li>
+                                <li><a href="https://modrinth.com/mod/aC3cM3Vq">Mouse Tweaks</a> [2.31]</li>
+                                <li><a href="https://modrinth.com/mod/MPCX6s5C">NotEnoughAnimations</a> [1.12.4]</li>
+                                <li><a href="https://modrinth.com/mod/ZX66K16c">Pick Up Notifier</a> [26.2.0]</li>
+                                <li><a href="https://modrinth.com/mod/eXts2L7r">Placeholder API</a> [3.1.0-beta.1+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/QAGBst4M">Puzzles Lib</a> [26.2.1]</li>
+                                <li><a href="https://modrinth.com/mod/yXAvIk0x">Scribble</a> [2.1.0-beta1]</li>
+                                <li><a href="https://modrinth.com/mod/kepjj2sy">Shoulder Surfing Reloaded</a> [5.0.7]</li>
+                                <li><a href="https://modrinth.com/mod/9eGKb6K1">Simple Voice Chat</a> [2.6.21+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/AANobbMI">Sodium</a> [0.9.1+mc26.2]</li>
+                                <li><a href="https://modrinth.com/mod/qyVF9oeo">Sound Physics Remastered</a> [1.5.1+26.2]</li>
+                                <li><a href="https://modrinth.com/mod/LN9BxssP">SuperMartijn642's Config Library</a> [1.1.8]</li>
+                                <li><a href="https://modrinth.com/mod/wK5BN6Ju">Take Your Stream Chat</a> [2.0.1]</li>
+                                <li><a href="https://modrinth.com/mod/OhduvhIc">Veinminer</a> [2.11.2]</li>
+                                <li><a href="https://modrinth.com/mod/4sP0LXxp">Veinminer Enchantment</a> [2.11.2]</li>
+                                <li><a href="https://modrinth.com/mod/kfqD1JRw">Visual Workbench</a> [26.2.1]</li>
+                                <li><a href="https://modrinth.com/mod/wGoQDPN5">Vivecraft</a> [26.2-1.3.15]</li>
+                                <li><a href="https://modrinth.com/mod/1eAoo2KR">YetAnotherConfigLib</a> [3.9.6+26.2-fabric]</li>
+                                <li><a href="https://modrinth.com/mod/k2ZPuTBm">essential-container</a> [1.0.0]</li>
+                                <li><a href="https://modrinth.com/mod/1snF16kT">faun</a> [2.0.1]</li>
+                                <li>
+                                    <b>Removed mods</b>
+                                    <ul>
+                                        <li><s><a href="https://modrinth.com/mod/M08ruV16">Bobby</a> [5.2.15+mc26.2]</s><br>
+                                        <small><i>Reason: Replaced by a better alternative (Voxy).</i></small></li>
+                                        <li><s><a href="https://modrinth.com/mod/H5XMjpHi">FirstPerson</a> [2.7.2]</s><br>
+                                        <small><i>Reason: Not well received.</i></small></li>
+                                        <li><s>FA+ Player Vivecraft Compat [1.1.0]</s><br>
+                                        <small><i>Reason: Compatibility issues & not well received.</i></small></li>
+                                    </ul>
+                                </li>
+                            </ul> <small>(<a href="Minecraft/Modpack Versions/26.2.0/Burrely's Community Pack.mrpack">download</a>)</small>
+                        </li>
+                    </ul>
+
+                    <p>
+                        <small>This changelog has only been maintained since 26.2.0, which is why there is no older lists available.
+                            Furthermore I'm not noting any version updates of individual mods. Only additions / removals of mods or updates of Minecraft itself.
+                        Sorry for the inconvenience. 🧡</small>
+                    </p>
+                </article>
+    </main>
+</body>
+</html>
